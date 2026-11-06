@@ -1,1 +1,82 @@
-[]
+[
+    {
+        "id": "3d505516059da99b",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "25bdb30c4afc3c1b",
+        "type": "inject",
+        "z": "3d505516059da99b",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"text\": \"UPSE\"}",
+        "payloadType": "json",
+        "x": 320,
+        "y": 300,
+        "wires": [
+            [
+                "46e5fe2eac54e618"
+            ]
+        ]
+    },
+    {
+        "id": "0bbc77dd0fa4541f",
+        "type": "debug",
+        "z": "3d505516059da99b",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 820,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "46e5fe2eac54e618",
+        "type": "change",
+        "z": "3d505516059da99b",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.text",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 540,
+        "y": 300,
+        "wires": [
+            [
+                "0bbc77dd0fa4541f"
+            ]
+        ]
+    }
+]
